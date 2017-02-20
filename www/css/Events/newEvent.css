@@ -1,0 +1,15 @@
+.newEvent {
+    background-image: url("../../img/BlueBackground/blueBackground1.jpg");
+    background-repeat: inherit;
+}
+
+.button.button-block, .button.button-full {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.button-large {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

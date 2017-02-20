@@ -1,0 +1,27 @@
+<ion-view view-title="Nouvel invité" align="justify">
+    <ion-content class="newGuest">
+        <ion-title class="title">
+            <h1 align="center">Nouvel Invité</h1>
+        </ion-title>
+        <form novalidate>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-person placeholder-icon "></i>
+                    <input type="text" placeholder="Prénom" ng-model="guest.firstName" required="required">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-person placeholder-icon"></i>
+                    <input type="text" placeholder="Nom" ng-model="guest.lastName">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-email placeholder-icon"></i>
+                    <input type="text" placeholder="Adresse mail" ng-model="guest.email">
+                </label>
+            </div>
+            <button ng-click="saveGuest()"
+                    class="button button-large button-calm saveButton">
+                Enregistrer
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,51 @@
+<ion-view view-title="Liste des évenements" align="justify">
+    <ion-content class="showEvents">
+        <ion-title class="title">
+            <h1 align="center">Liste des événements</h1>
+        </ion-title>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <ion-list show-delete="shouldShowDelete">
+            <ion-item class="item tab-item-active item-delete" ng-repeat="event in events " ng-click="view = !view">
+                {{events.date}}
+                <h2>
+                    {{event.name}}
+                </h2>
+                <div ng-show="view">
+                    <hr>
+                    <p>
+                        <i class="icon ion-calendar"></i>
+                        <b>Date:</b> {{event.date | date: 'dd/MM/yyyy' }}
+                    <p>{{event.date}}</p>
+                    </p>
+                    <p>
+                        <i class="icon ion-clock"></i>
+                        <b>Heure:</b> {{event.hour}}
+                    </p>
+                    <p>
+                        <i class="icon ion-navigate"></i>
+                        <b>Lieu:</b> {{event.place}}
+                    </p>
+                    <div class="buttons">
+                        <div ng-controller="ShowEventsController">
+                            <button class="button button-block button-calm button-event"
+                                    ng-click="goToShowEvent( event.id, event.name, event.date, event.hour, event.place)">
+                                Modifier l'événement
+                            </button>
+                        </div>
+                        <div ng-controller="ShowEventsController">
+                            <button class="button button-block button-balanced button-event" ng-click="goToShowGuests(event.id)">
+                                Envoyer des invitations
+                            </button>
+                        </div>
+                        <div ng-controller="DeleteEventController">
+                            <button class="button button-block button-assertive button-event"
+                                    ng-click="confirmDelete(event.id, $index)">
+                                Supprimer l'événement
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

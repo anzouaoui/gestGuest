@@ -1,0 +1,46 @@
+<ion-view view-title="Liste des invités" align="justify">
+    <ion-content class="showGuests">
+        <ion-title class="title">
+            <h1 align="center">Liste des invités</h1>
+        </ion-title>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+
+        <ion-list show-delete="shouldShowDelete">
+            <ion-item class="item tab-item-active item-delete" ng-repeat="guest in guests " ng-click="view = !view">
+
+                <h2>
+                    {{guest.firstName}} {{guest.lastName}}
+                </h2>
+                <div ng-show="view">
+                    <hr>
+                    <p>
+                        <i class="icon ion-calendar"></i>
+                        <b>Adresse mail:</b> {{guest.email}}
+                    </p>
+                    <ion-toggle toggle-class="toglle-calm">
+                        Présent
+                    </ion-toggle>
+                    <input type="hidden" ng-model="currentIdEvent">
+                    <div class="buttons">
+                        <div ng-controller="ShowGuestsController">
+                            <button class="button button-block button-calm button-event">
+                                Modifier les données de l'invité
+                            </button>
+                        </div>
+                        <div ng-controller="DeleteGuestController">
+                            <button class="button button-block button-assertive button-event" ng-click="confirmDelete(guest.id, $index)">
+                                Supprimer l'invité
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div ng-controller="ShowGuestsController">
+            <button class="button button-block button-balanced" ng-click="goToNewGuest(currentIdEvent)">
+                <i class="icon ion-person-add"></i>
+                Ajouter un invité
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

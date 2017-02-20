@@ -1,0 +1,32 @@
+<ion-view view-title="Nouvel événement" align="justify">
+    <ion-content class="newEvent">
+        <ion-title class="title">
+            <h1 align="center">Nouvel événement</h1>
+        </ion-title>
+            <form novalidate>
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <i class="icon ion-ios-bell placeholder-icon "></i>
+                        <input type="text" placeholder="Evénement" ng-model="event.name" required="required">
+                    </label>
+                    <label class="item item-input" ng-click="openDatePicker()">
+                        <i class="icon ion-android-calendar placeholder-icon"></i>
+                        <input type="text" placeholder="Date" ng-model="event.date">
+                    </label>
+                    <label class="item item-input" ng-click="openTimePicker()">
+                        <i class="icon ion-clock placeholder-icon"></i>
+                        <input type="text" placeholder="Heure" ng-model="event.hour">
+                    </label>
+                    <label class="item item-input">
+                        <i class="icon ion-location placeholder-icon"></i>
+                        <input type="text" placeholder="Lieu" ng-model="event.place" required="required">
+                    </label>
+
+                </div>
+                <button ng-click="saveEvent()"
+                        class="button button-large button-calm saveButton">
+                    Enregistrer
+                </button>
+            </form>
+    </ion-content>
+</ion-view>

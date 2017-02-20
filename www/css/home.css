@@ -1,0 +1,16 @@
+/* Empty. Add your own CSS if you like */
+.home {
+    background-image: url("../img/BlueBackground/blueBackground2.jpg");
+    background-repeat: inherit;
+    color: #969696;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
