@@ -1,11 +1,21 @@
 app.controller('ShowEventsController',
-    function ($scope, $stateParams, $ionicPopup, $state, ionicToast, DataServiceEvents) {
+    function ($scope, $stateParams, $ionicPopup, $state, ionicToast, DataServiceEvents, DataServiceGuests) {
+        $scope.fetchId = function (id) {
+            $state.go('showEvents',
+                {
+                    id: id
+                }
+            )
+        };
+
         $scope.events = [];
+
         DataServiceEvents.fetchAll(function (data) {
             $scope.events = data;
         });
-        console.log($scope.events);
-
+        console.log($stateParams);
+        $scope.guests = DataServiceGuests.fetchByGuests($stateParams);
+        console.log($scope.guests);
 
         /**
          * Go to the edit page
@@ -47,5 +57,5 @@ app.controller('ShowEventsController',
                 $scope.events = data;
             });
             $scope.$broadcast('scroll.refreshComplete');
-        }
+        };
     });

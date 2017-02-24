@@ -1,4 +1,11 @@
 <ion-view view-title="Liste des invités" align="justify">
+    <ion-nav-bar class="bar-calm" align-title="center">
+        <ion-nav-buttons side="right">
+            <button class="button" ui-sref="newEvent">
+                <i class="icon ion-android-add"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
     <ion-content class="showGuests">
         <ion-title class="title">
             <h1 align="center">Liste des invités</h1>
@@ -17,13 +24,10 @@
                         <i class="icon ion-calendar"></i>
                         <b>Adresse mail:</b> {{guest.email}}
                     </p>
-                    <ion-toggle toggle-class="toglle-calm">
-                        Présent
-                    </ion-toggle>
                     <input type="hidden" ng-model="currentIdEvent">
                     <div class="buttons">
                         <div ng-controller="ShowGuestsController">
-                            <button class="button button-block button-calm button-event">
+                            <button class="button button-block button-calm button-event" ng-click="goToUpdateGuest(guest.id, guest.firstName, guest.lastName, guest.email, guest.confirmed, currentIdEvent)">
                                 Modifier les données de l'invité
                             </button>
                         </div>
@@ -42,5 +46,20 @@
                 Ajouter un invité
             </button>
         </div>
+        <pre>{{guest.confirmed}}</pre>
     </ion-content>
+    <ion-tabs class="tabs-background-calm tabs-icon-top" hide-tabs="">
+        <a class="tab-item" ui-sref="showEvents">
+            <i class="icon ion-android-list"></i>
+            Evenements
+        </a>
+        <a class="tab-item" ui-sref="home">
+            <i class="icon ion-android-home"></i>
+            Accueil
+        </a>
+        <a class="tab-item">
+            <i class=" icon ion-android-settings"></i>
+            Paramètres
+        </a>
+    </ion-tabs>
 </ion-view>

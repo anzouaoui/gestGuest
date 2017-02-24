@@ -149,6 +149,11 @@ app.factory('DataServiceGuests', function ($cordovaSQLite, $ionicPlatform, ionic
                     callback(data);
                 })
         },
+        fetchByGuests: function (idEvent) {
+            var query = "SELECT COUNT(*) AS nbGuests FROM GUEST where idEvent = ?";
+            var nbGuests = $cordovaSQLite.execute(db, query, [idEvent]);
+            return nbGuests;
+        },
         /**
          * Delete one database row
          * @param id

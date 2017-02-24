@@ -1,4 +1,11 @@
 <ion-view view-title="Accueil" align="justify">
+    <ion-nav-bar class="bar-calm" align-title="center">
+        <ion-nav-buttons side="right">
+            <button class="button" ui-sref="newEvent">
+                <i class="icon ion-android-add"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
     <ion-content class="home">
         <div class="row">
             <div class="col col-100">
@@ -18,4 +25,18 @@
             ac lobortis enim efficitur sit amet. Ut et felis diam.
         </div>
     </ion-content>
+    <ion-tabs class="tabs-background-calm tabs-icon-top" hide-tabs="">
+        <a class="tab-item" ui-sref="showEvents">
+            <i class="icon ion-android-list"></i>
+            Evenements
+        </a>
+        <a class="tab-item" ui-sref="home">
+            <i class="icon ion-android-home"></i>
+            Accueil
+        </a>
+        <a class="tab-item">
+            <i class=" icon ion-android-settings"></i>
+            Paramètres
+        </a>
+    </ion-tabs>
 </ion-view>

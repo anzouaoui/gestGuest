@@ -1,4 +1,4 @@
-<ion-view view-title="Nouvel invité" align="justify">
+<ion-view view-title="Modifier l'invité" align="justify">
     <ion-nav-bar class="bar-calm" align-title="center">
         <ion-nav-buttons side="right">
             <button class="button" ui-sref="newEvent">
@@ -6,27 +6,31 @@
             </button>
         </ion-nav-buttons>
     </ion-nav-bar>
-    <ion-content class="newGuest">
+    <ion-content class="updateGuest">
         <ion-title class="title">
-            <h1 align="center">Nouvel Invité</h1>
+            <h1 align="center">Modifier l'invité</h1>
         </ion-title>
         <form novalidate>
             <div class="list list-inset">
                 <label class="item item-input">
                     <i class="icon ion-person placeholder-icon "></i>
-                    <input type="text" placeholder="Prénom" ng-model="guest.firstName" required="required">
+                    <input type="text" placeholder="Prenom" ng-model="guest.firstName" required="required" value="">
                 </label>
                 <label class="item item-input">
                     <i class="icon ion-person placeholder-icon"></i>
-                    <input type="text" placeholder="Nom" ng-model="guest.lastName">
+                    <input type="text" placeholder="Nom" ng-model="guest.lastName" value="">
                 </label>
                 <label class="item item-input">
                     <i class="icon ion-email placeholder-icon"></i>
-                    <input type="text" placeholder="Adresse mail" ng-model="guest.email">
+                    <input type="email" placeholder="Adresse Mail" ng-model="guest.email" value="">
                 </label>
+
+                <ion-toggle ng-model="guest.confirmed" toggle-class="toglle-calm">
+                    Présent
+                </ion-toggle>
             </div>
-            <button ng-click="saveGuest()"
-                    class="button button-large button-calm saveButton">
+            <button  ng-click="editGuest()"
+                     class="button button-large button-calm saveButton">
                 Enregistrer
             </button>
         </form>

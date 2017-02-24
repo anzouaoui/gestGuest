@@ -23,8 +23,18 @@ var app = angular.module('starter', ['ionic', 'ngCordova', 'ionic-toast', 'ionic
 
     .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         $ionicConfigProvider.tabs.position('bottom');
-        $stateProvider.state('home', {
+        $stateProvider.state('login', {
             url: '/',
+            templateUrl: 'templates/Users/login.html',
+            controller: 'LoginController'
+        });
+        $stateProvider.state('suscribe', {
+            url: '/suscribe',
+            templateUrl: 'templates/Users/suscribe.html',
+            controller: 'SuscribeController'
+        });
+        $stateProvider.state('home', {
+            url: '/home',
             templateUrl: 'templates/home.html'
         });
         $stateProvider.state('newEvent', {
@@ -35,7 +45,10 @@ var app = angular.module('starter', ['ionic', 'ngCordova', 'ionic-toast', 'ionic
         $stateProvider.state('showEvents', {
             url: '/Events',
             templateUrl: 'templates/Events/showEvents.html',
-            controller: 'ShowEventsController'
+            controller: 'ShowEventsController',
+            params: {
+                id: null
+            }
         });
         $stateProvider.state('deleteEvent', {
             url: '/deleteEvent',
@@ -72,19 +85,20 @@ var app = angular.module('starter', ['ionic', 'ngCordova', 'ionic-toast', 'ionic
         });
         $stateProvider.state('deleteGuest', {
             url: '/deleteGuest',
-            templateUrl: 'templates/Events/showEvents.html',
+            templateUrl: 'templates/Guests/showGuests.html',
             controller: 'DeleteGuestController'
         });
         $stateProvider.state('updateGuest', {
             url: '/updateGuest',
-            templateUrl: 'templates/Events/updateGuest.html',
+            templateUrl: 'templates/Guests/updateGuest.html',
             controller: 'UpdateGuestController',
             params: {
                 id: null,
-                name: null,
-                date: null,
-                hour: null,
-                place: null
+                firstName: null,
+                lastName: null,
+                email: null,
+                confirmed: null,
+                idEvent: null
             }
         });
 

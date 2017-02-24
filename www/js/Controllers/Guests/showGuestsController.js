@@ -20,6 +20,19 @@ app.controller('ShowGuestsController',
             $scope.$broadcast('scroll.refreshComplete');
         };
 
+        $scope.goToUpdateGuest = function (id,firstName, lastName, email, confirmed, idEvent) {
+            $state.go('updateGuest',
+                {
+                    id: id,
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    confirmed: confirmed,
+                    idEvent: idEvent
+                }
+            )
+        };
+
         /**
          * Function to go to the new guest page
          */

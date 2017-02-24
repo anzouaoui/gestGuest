@@ -1,0 +1,29 @@
+<ion-view view-title="Connexion" align="justify" >
+    <ion-content class="login">
+        <div class="row logo">
+            <div class="col col-100">
+                <img src="img/logo/logo2.png" height="117" width="215" id="logo"/>
+            </div>
+        </div>
+        <ion-title class="title">
+            <h1 align="center">Se connecter</h1>
+        </ion-title>
+        <form novalidate>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="email" placeholder="Adresse mail" ng-model="user.email">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Mot de passe" ng-model="user.password">
+                </label>
+            </div>
+                <div class="row">
+                    <button class="button button-large button-calm" ng-click="goToEvents()">
+                        connection
+                    </button>
+                    <button class="button button-large button-balanced" ui-sref="suscribe">
+                        inscription</button>
+                </div>
+        </form>
+    </ion-content>
+</ion-view>
