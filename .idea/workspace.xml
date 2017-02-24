@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72502f62-7218-4e0f-99f8-5ed2e66aacd8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/BlueBackground/blueBackground7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/BlueBackground/blueBackground8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/BlueBackground/blueBackground9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/Guests/updateGuest.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/Users/login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/Users/subscribe.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/Controllers/Users/loginController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/Controllers/Users/suscribeController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/Services/servicesUsers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/Guests/updateGuest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/Users/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/Users/suscribe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/Controllers/Events/showEventsController.js" afterPath="$PROJECT_DIR$/www/js/Controllers/Events/showEventsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/Controllers/Guests/showGuestsController.js" afterPath="$PROJECT_DIR$/www/js/Controllers/Guests/showGuestsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/Controllers/Guests/updateGuestController.js" afterPath="$PROJECT_DIR$/www/js/Controllers/Guests/updateGuestController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/Services/servicesGuests.js" afterPath="$PROJECT_DIR$/www/js/Services/servicesGuests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/Events/newEvent.html" afterPath="$PROJECT_DIR$/www/templates/Events/newEvent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/Events/showEvents.html" afterPath="$PROJECT_DIR$/www/templates/Events/showEvents.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/Events/updateEvent.html" afterPath="$PROJECT_DIR$/www/templates/Events/updateEvent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/Guests/newGuest.html" afterPath="$PROJECT_DIR$/www/templates/Guests/newGuest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/Guests/showGuests.html" afterPath="$PROJECT_DIR$/www/templates/Guests/showGuests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/home.html" afterPath="$PROJECT_DIR$/www/templates/home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -631,12 +606,20 @@
       <workItem from="1487248119842" duration="4280000" />
       <workItem from="1487254672000" duration="56700000" />
       <workItem from="1487518824708" duration="14672000" />
-      <workItem from="1487611938431" duration="63225000" />
+      <workItem from="1487611938431" duration="63489000" />
     </task>
+    <task id="LOCAL-00001" summary="New commit">
+      <created>1487961569203</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1487961569203</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138877000" />
+    <option name="totallyTimeSpent" value="139141000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,7 +637,7 @@
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262317" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -696,6 +679,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="New commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
