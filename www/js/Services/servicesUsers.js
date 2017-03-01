@@ -117,16 +117,6 @@ app.factory('DataServicesUsers', function ($cordovaSQLite, $ionicPlatform, ionic
                 })
         },
         /**
-         * Delete one datase row
-         * @param id
-         * @returns {*}
-         */
-        delete: function (id) {
-            var query = "DELETE FROM USER where id = ?";
-            var deleteSql = $cordovaSQLite.execute(db, query, [id]);
-            return deleteSql;
-        },
-        /**
          * Fetch the current user
          * @param email
          * @param password
@@ -139,11 +129,21 @@ app.factory('DataServicesUsers', function ($cordovaSQLite, $ionicPlatform, ionic
                 .then(function (res) {
                     var data = [];
                     var max = res.rows.length;
-                    if (max == 1) {
-                        data.push(res.rows.item(0));
+                    for (var i=0 ; i<max; i++) {
+                        data.push(res.rows.item(i));
                     }
                     callback(data);
                 })
+        },
+        /**
+         * Delete one datase row
+         * @param id
+         * @returns {*}
+         */
+        delete: function (id) {
+            var query = "DELETE FROM USER where id = ?";
+            var deleteSql = $cordovaSQLite.execute(db, query, [id]);
+            return deleteSql;
         },
         fetchPasswords: function (callback) {
             var query = "SELECT password FROM USER";

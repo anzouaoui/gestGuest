@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in servicesEvents.js
 // 'starter.controllers' is found in newEventController.js
-var app = angular.module('starter', ['ionic', 'ngCordova', 'ionic-toast', 'ionic-datepicker', 'ionic-timepicker'])
+var app = angular.module('starter', ['ionic', 'ngCordova', 'ionic-toast', 'ionic-datepicker', 'ionic-timepicker', 'ngCordovaOauth', 'ngOpenFB', 'ngFacebook'])
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -101,6 +101,11 @@ var app = angular.module('starter', ['ionic', 'ngCordova', 'ionic-toast', 'ionic
                 idEvent: null
             }
         });
+        $stateProvider.state('settings', {
+            url: '/settings',
+            templateUrl: 'templates/settings.html',
+            controller: 'SettingsController'
+        });
 
         $urlRouterProvider.otherwise('/');
 
@@ -137,4 +142,10 @@ var app = angular.module('starter', ['ionic', 'ngCordova', 'ionic-toast', 'ionic
             closeLabel: 'Fermer'
         };
         ionicTimePickerProvider.configTimePicker(timePickerObject);
-    });
+    })
+
+    .config(function ($facebookProvider) {
+        $facebookProvider.setAppId('647541418781098').setPermissions(['email', 'user_profile']);
+    })
+
+    .constant("socialrovider", "facebook");

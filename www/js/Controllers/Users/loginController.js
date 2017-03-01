@@ -1,38 +1,70 @@
 app.controller('LoginController',
-    function ($scope, $stateParams, $ionicPlatform, $cordovaSQLite, $state,$ionicPopup, DataServiceEvents, DataServicesUsers) {
-        var currentUser = $scope.user = {
-            email: '',
-            password: ''
+    function ($scope, $stateParams, $ionicPlatform, $cordovaSQLite, $state, $ionicPopup, $cordovaOauth, $openFB, $facebook) {
+        $openFB.init(
+            {
+                appId: '647541418781098'
+            }
+        );
+        /**
+         * Connection with Facebook
+         */
+        $scope.loginFacebook = function () {
+
+             $cordovaOauth.facebook("647541418781098", ["email"]).then(function (result) {
+             $state.go('home');
+             var alertConnection = $ionicPopup.alert(
+             {
+             title: 'Connecté',
+             template: 'Bienvenue dans votre espace'
+             });
+             alertNoConnection.then(function (res) {
+             checked = true;
+             });
+
+             }, function (error) {
+             console.log("Non connecté " + error);
+             });
+
         };
 
+        /**
+         * Connection with Google
+         */
+        $scope.loginGoogle = function () {
+            $cordovaOauth.google("749362681855-hu3clrjs2q0dciccdm95ltdkb0qmvg15.apps.googleusercontent.com ", ["email"]).then(function (result) {
+                $state.go('home');
 
-        $scope.goToEvents = function () {
-            DataServicesUsers.connection(currentUser.email, currentUser.password, function (data) {
-                currentUser = data;
-                if(currentUser.length == 1) {
-                    $state.go('home')
-                        .then(function (res) {
-                            var alertPopup = $ionicPopup.alert(
-                                {
-                                    title: 'Connexion réussie',
-                                    template: 'Bienvenue dans votre espace'
-                                }
-                            );
-                            alertPopup.then(function (res) {
-                            });
-                        });
-                    }else {
-                    var alertPopup = $ionicPopup.alert(
-                        {
-                            title: 'Compte inexistant' ,
-                            template: 'cet utilisateur n\'existe pas'
-                        }
-                    );
-                    alertPopup.then(function (res) {
+                var alertConnection = $ionicPopup.alert(
+                    {
+                        title: 'Connecté',
+                        template: 'Bienvenue dans votre espace'
                     });
-                }
-            });
+                alertNoConnection.then(function (res) {
+                    checked = true;
+                });
+            }, function (error) {
+                console.log("Non connecté " + error);
+            })
 
-            console.log(currentUser)
+        };
+
+        /**
+         * Connection with Twitter
+         */
+        $scope.loginTwitter = function () {
+            $cordovaOauth.twitter("dUhh6xgeqM43cs4IMEhCRO8Z6", "LQU3T8ljLpbiLBYSTHSF0oh56mOnWfmWkkmJHv1Xdg3JSOIqZY").then(function (result) {
+                $state.go('home');
+                var alertConnection = $ionicPopup.alert(
+                    {
+                        title: 'Connecté',
+                        template: 'Bienvenue dans votre espace'
+                    });
+                alertNoConnection.then(function (res) {
+                    checked = true;
+                }, function (error) {
+                    console.log("Non connecté " + error);
+                });
+            })
+
         }
     });

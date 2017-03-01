@@ -1,4 +1,4 @@
-<ion-view view-title="Connexion" align="justify" >
+<ion-view view-title="Connexion" align="justify">
     <ion-content class="login">
         <div class="row logo">
             <div class="col col-100">
@@ -8,22 +8,43 @@
         <ion-title class="title">
             <h1 align="center">Se connecter</h1>
         </ion-title>
-        <form novalidate>
-            <div class="list list-inset">
-                <label class="item item-input">
-                    <input type="email" placeholder="Adresse mail" ng-model="user.email">
-                </label>
-                <label class="item item-input">
-                    <input type="password" placeholder="Mot de passe" ng-model="user.password">
-                </label>
-            </div>
+        <div class="row">
+            <button class="button button-block button-positive" ng-click="loginFacebook()">
                 <div class="row">
-                    <button class="button button-large button-calm" ng-click="goToEvents()">
-                        connection
-                    </button>
-                    <button class="button button-large button-balanced" ui-sref="suscribe">
-                        inscription</button>
+                    <div class="col-10">
+                        <i class="icon ion-social-facebook"></i>
+                    </div>
+                    <div class="col-90">
+                        Se connecter avec facebook
+                    </div>
                 </div>
-        </form>
+            </button>
+        </div>
+        <div class="row">
+            <button class="button button-block button-assertive" ng-click="loginGoogle()">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="icon ion-social-googleplus"></i>
+                    </div>
+                    <div class="col-90">
+                        Se connecter avec Google
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div class="row">
+            <button class="button button-block button-calm" ng-click="loginTwitter()">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="icon ion-social-twitter"></i>
+                    </div>
+                    <div class="col-90">
+                        Se connecter avec Twitter
+                    </div>
+                </div>
+            </button>
+        </div>
+
+
     </ion-content>
 </ion-view>

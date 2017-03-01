@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="google-signin-client_id"
+          content="749362681855-hu3clrjs2q0dciccdm95ltdkb0qmvg15.apps.googleusercontent.com">
     <title></title>
 
     <link rel="manifest" href="manifest.json">
@@ -18,7 +20,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Users/login.css">
     <link rel="stylesheet" href="css/Users/subscribe.css">
-
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/Users/loginFirebase.css">
 
     <!-- Libraries -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -44,6 +47,8 @@
     <script src="js/Controllers/Guests/updateGuestController.js"></script>
     <script src="js/Controllers/Users/loginController.js"></script>
     <script src="js/Controllers/Users/suscribeController.js"></script>
+    <script src="js/Controllers/SettingsController.js"></script>
+    <script src="js/Controllers/Users/loginFirebaseController.js"></script>
 
     <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
@@ -52,7 +57,25 @@
     <script src="lib/angular/angular.js"></script>
     <script src="lib/ionic/js/ionic-angular.js"></script>
     <script src="lib/ionic/js/ionic.js"></script>
+    <script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
+    <script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.min.js"></script>
+    <script src="../plugins/cordova-plugin-googleplus/www/GooglePlus.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+    <script src="js/ngopenfb.js"></script>
+    <script src="js/openfb.js"></script>
+    <script src="lib/ngOpenFB/ngOpenFB.js"></script>
+    <script src="lib/ngOpenFB/ngOpenFB.min.js"></script>
+    <script src="lib/ng-facebook/ngFacebook.js"></script>
+    <script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/2.0.5/stamplay.min.js"></script>
+    <script>
+        Stamplay.init("stamplay-ionic-starter-fb", {
+            isMobile: true,
+            absoluteUrl: true,
+            autorefreshSocialLogin: true
+        });
+
+    </script>
 
 </head>
 <body ng-app="starter">
